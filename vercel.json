@@ -1,0 +1,38 @@
+{
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-control",
+          "value": "no-store"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Expires",
+          "value": "-1"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1;mode=block"
+        }
+      ]
+    }
+  ],
+  "regions": ["all"]
+}

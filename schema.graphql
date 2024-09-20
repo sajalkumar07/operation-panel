@@ -1,0 +1,459 @@
+﻿type ClassWorkflowMetadata {
+	id: ID!
+	classId: String
+	courseId: String
+	data: String
+	workflowId: String
+}
+
+type ClassWorkflowMetadataConnection {
+	items: [ClassWorkflowMetadata]
+	nextToken: String
+}
+
+input CreateClassWorkflowMetadataInput {
+	classId: String
+	courseId: String
+	data: String
+	workflowId: String
+}
+
+input CreateLearningActionInput {
+	version: String
+	name: String!
+	descriptionImage: String
+	descriptiontext: String
+	actionType: String!
+	actionData: String
+	tags: [String]
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	updatedBy: String
+	lessonPlanTemplate: String,
+	lessonPlanDocumentUrl: String,
+	userRole: String,
+	uniqueIdentifier: String
+	publishStatus: Boolean
+}
+
+input CreateLearningActionRendererInput {
+	actionType: String
+	editRenderPath: String
+	viewRenderPath: String
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	UpdatedBy: String
+}
+
+input CreateTagsInput {
+	id: String!
+	key: String!
+	value: String!
+}
+
+input CreateWorkflowInput {
+	name: String!
+	descriptionImage: String
+	descriptionText: String
+	data: String!
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	updatedBy: String
+}
+
+input DeleteClassWorkflowMetadataInput {
+	id: ID!
+}
+
+input DeleteLearningActionInput {
+	id: ID!
+}
+
+input DeleteLearningActionRendererInput {
+	id: ID!
+}
+
+input DeleteTagsInput {
+	key: String!
+	value: String!
+}
+
+input DeleteWorkflowInput {
+	id: ID!
+}
+
+type LearningAction {
+	id: ID!
+	version: String
+	name: String!
+	descriptionImage: String
+	descriptiontext: String
+	actionType: String!
+	actionData: String
+	tags: [String]
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	updatedBy: String
+	lessonPlanTemplate: String,
+	lessonPlanDocumentUrl: String,
+	userRole: String,
+	uniqueIdentifier: String
+	publishStatus: Boolean
+}
+
+type LearningActionConnection {
+	items: [LearningAction]
+	nextToken: String
+}
+
+type LearningActionRenderer {
+	id: ID!
+	actionType: String
+	editRenderPath: String
+	viewRenderPath: String
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	UpdatedBy: String
+}
+
+type LearningActionRendererConnection {
+	items: [LearningActionRenderer]
+	nextToken: String
+}
+
+type Mutation {
+	createLearningAction(input: CreateLearningActionInput!): LearningAction
+	updateLearningAction(input: UpdateLearningActionInput!): LearningAction
+	deleteLearningAction(input: DeleteLearningActionInput!): LearningAction
+	createLearningActionRenderer(input: CreateLearningActionRendererInput!): LearningActionRenderer
+	updateLearningActionRenderer(input: UpdateLearningActionRendererInput!): LearningActionRenderer
+	deleteLearningActionRenderer(input: DeleteLearningActionRendererInput!): LearningActionRenderer
+	createWorkflow(input: CreateWorkflowInput!): Workflow
+	updateWorkflow(input: UpdateWorkflowInput!): Workflow
+	deleteWorkflow(input: DeleteWorkflowInput!): Workflow
+	createClassWorkflowMetadata(input: CreateClassWorkflowMetadataInput!): ClassWorkflowMetadata
+	updateClassWorkflowMetadata(input: UpdateClassWorkflowMetadataInput!): ClassWorkflowMetadata
+	deleteClassWorkflowMetadata(input: DeleteClassWorkflowMetadataInput!): ClassWorkflowMetadata
+	createTags(input: CreateTagsInput!): Tags
+	updateTags(input: UpdateTagsInput!): Tags
+	deleteTags(input: DeleteTagsInput!): Tags
+}
+
+type Query {
+	getLearningAction(id: ID!): LearningAction
+	listLearningActions(filter: TableLearningActionFilterInput, limit: Int, nextToken: String): LearningActionConnection
+	getLearningActionRenderer(id: ID!): LearningActionRenderer
+	listLearningActionRenderers(filter: TableLearningActionRendererFilterInput, limit: Int, nextToken: String): LearningActionRendererConnection
+	getWorkflow(id: ID!): Workflow
+	listWorkflows(filter: TableWorkflowFilterInput, limit: Int, nextToken: String): WorkflowConnection
+	getClassWorkflowMetadata(id: ID!): ClassWorkflowMetadata
+	listClassWorkflowMetadata(filter: TableClassWorkflowMetadataFilterInput, limit: Int, nextToken: String): ClassWorkflowMetadataConnection
+	getTags(key: String!, value: String!): Tags
+	listTags(filter: TableTagsFilterInput, limit: Int, nextToken: String): TagsConnection
+}
+
+type Subscription {
+	onCreateLearningAction(
+		id: ID,
+		version: String,
+		name: String,
+		descriptionImage: String,
+		descriptiontext: String
+	): LearningAction
+		@aws_subscribe(mutations: ["createLearningAction"])
+	onUpdateLearningAction(
+		id: ID,
+		version: String,
+		name: String,
+		descriptionImage: String,
+		descriptiontext: String
+	): LearningAction
+		@aws_subscribe(mutations: ["updateLearningAction"])
+	onDeleteLearningAction(
+		id: ID,
+		version: String,
+		name: String,
+		descriptionImage: String,
+		descriptiontext: String
+	): LearningAction
+		@aws_subscribe(mutations: ["deleteLearningAction"])
+	onCreateLearningActionRenderer(
+		id: ID,
+		actionType: String,
+		editRenderPath: String,
+		viewRenderPath: String,
+		updatedAt: String
+	): LearningActionRenderer
+		@aws_subscribe(mutations: ["createLearningActionRenderer"])
+	onUpdateLearningActionRenderer(
+		id: ID,
+		actionType: String,
+		editRenderPath: String,
+		viewRenderPath: String,
+		updatedAt: String
+	): LearningActionRenderer
+		@aws_subscribe(mutations: ["updateLearningActionRenderer"])
+	onDeleteLearningActionRenderer(
+		id: ID,
+		actionType: String,
+		editRenderPath: String,
+		viewRenderPath: String,
+		updatedAt: String
+	): LearningActionRenderer
+		@aws_subscribe(mutations: ["deleteLearningActionRenderer"])
+	onCreateWorkflow(
+		id: ID,
+		name: String,
+		descriptionImage: String,
+		descriptionText: String,
+		data: String
+	): Workflow
+		@aws_subscribe(mutations: ["createWorkflow"])
+	onUpdateWorkflow(
+		id: ID,
+		name: String,
+		descriptionImage: String,
+		descriptionText: String,
+		data: String
+	): Workflow
+		@aws_subscribe(mutations: ["updateWorkflow"])
+	onDeleteWorkflow(
+		id: ID,
+		name: String,
+		descriptionImage: String,
+		descriptionText: String,
+		data: String
+	): Workflow
+		@aws_subscribe(mutations: ["deleteWorkflow"])
+	onCreateClassWorkflowMetadata(
+		id: ID,
+		classId: String,
+		courseId: String,
+		data: String,
+		workflowId: String
+	): ClassWorkflowMetadata
+		@aws_subscribe(mutations: ["createClassWorkflowMetadata"])
+	onUpdateClassWorkflowMetadata(
+		id: ID,
+		classId: String,
+		courseId: String,
+		data: String,
+		workflowId: String
+	): ClassWorkflowMetadata
+		@aws_subscribe(mutations: ["updateClassWorkflowMetadata"])
+	onDeleteClassWorkflowMetadata(
+		id: ID,
+		classId: String,
+		courseId: String,
+		data: String,
+		workflowId: String
+	): ClassWorkflowMetadata
+		@aws_subscribe(mutations: ["deleteClassWorkflowMetadata"])
+	onCreateTags(id: String, key: String, value: String): Tags
+		@aws_subscribe(mutations: ["createTags"])
+	onUpdateTags(id: String, key: String, value: String): Tags
+		@aws_subscribe(mutations: ["updateTags"])
+	onDeleteTags(id: String, key: String, value: String): Tags
+		@aws_subscribe(mutations: ["deleteTags"])
+}
+
+input TableBooleanFilterInput {
+	ne: Boolean
+	eq: Boolean
+}
+
+input TableClassWorkflowMetadataFilterInput {
+	id: TableIDFilterInput
+	classId: TableStringFilterInput
+	courseId: TableStringFilterInput
+	data: TableStringFilterInput
+	workflowId: TableStringFilterInput
+}
+
+input TableFloatFilterInput {
+	ne: Float
+	eq: Float
+	le: Float
+	lt: Float
+	ge: Float
+	gt: Float
+	contains: Float
+	notContains: Float
+	between: [Float]
+}
+
+input TableIDFilterInput {
+	ne: ID
+	eq: ID
+	le: ID
+	lt: ID
+	ge: ID
+	gt: ID
+	contains: ID
+	notContains: ID
+	between: [ID]
+	beginsWith: ID
+}
+
+input TableIntFilterInput {
+	ne: Int
+	eq: Int
+	le: Int
+	lt: Int
+	ge: Int
+	gt: Int
+	contains: Int
+	notContains: Int
+	between: [Int]
+}
+
+input TableLearningActionFilterInput {
+	id: TableIDFilterInput
+	version: TableStringFilterInput
+	name: TableStringFilterInput
+	descriptionImage: TableStringFilterInput
+	descriptiontext: TableStringFilterInput
+	actionType: TableStringFilterInput
+	actionData: TableStringFilterInput
+	tags: TableStringFilterInput
+	updatedAt: TableStringFilterInput
+	createdAt: TableStringFilterInput
+	createdBy: TableStringFilterInput
+	updatedBy: TableStringFilterInput
+	uniqueIdentifier: TableStringFilterInput
+	publishStatus: TableBooleanFilterInput
+	and: [TableLearningActionFilterInput]
+	or: [TableLearningActionFilterInput]
+}
+
+input TableLearningActionRendererFilterInput {
+	id: TableIDFilterInput
+	actionType: TableStringFilterInput
+	editRenderPath: TableStringFilterInput
+	viewRenderPath: TableStringFilterInput
+	updatedAt: TableStringFilterInput
+	createdAt: TableStringFilterInput
+	createdBy: TableStringFilterInput
+	UpdatedBy: TableStringFilterInput
+}
+
+input TableStringFilterInput {
+	ne: String
+	eq: String
+	le: String
+	lt: String
+	ge: String
+	gt: String
+	contains: String
+	notContains: String
+	between: [String]
+	beginsWith: String
+}
+
+input TableTagsFilterInput {
+	id: TableIDFilterInput
+	key: TableStringFilterInput
+	value: TableStringFilterInput
+}
+
+input TableWorkflowFilterInput {
+	id: TableIDFilterInput
+	name: TableStringFilterInput
+	descriptionImage: TableStringFilterInput
+	descriptionText: TableStringFilterInput
+	data: TableStringFilterInput
+	updatedAt: TableStringFilterInput
+	createdAt: TableStringFilterInput
+	createdBy: TableStringFilterInput
+	updatedBy: TableStringFilterInput
+}
+
+type Tags {
+	id: String!
+	key: String!
+	value: String!
+}
+
+type TagsConnection {
+	items: [Tags]
+	nextToken: String
+}
+
+input UpdateClassWorkflowMetadataInput {
+	id: ID!
+	classId: String
+	courseId: String
+	data: String
+	workflowId: String
+}
+
+input UpdateLearningActionInput {
+	id: ID!
+	version: String
+	name: String
+	descriptionImage: String
+	descriptiontext: String
+	actionType: String
+	actionData: String
+	tags: [String]
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	updatedBy: String
+	lessonPlanTemplate: String,
+	lessonPlanDocumentUrl: String,
+	userRole: String,
+	uniqueIdentifier: String
+	publishStatus: Boolean
+}
+
+input UpdateLearningActionRendererInput {
+	id: ID!
+	actionType: String
+	editRenderPath: String
+	viewRenderPath: String
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	UpdatedBy: String
+}
+
+input UpdateTagsInput {
+	id: ID
+	key: String!
+	value: String!
+}
+
+input UpdateWorkflowInput {
+	id: ID!
+	name: String
+	descriptionImage: String
+	descriptionText: String
+	data: String
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	updatedBy: String
+}
+
+type Workflow {
+	id: ID!
+	name: String!
+	descriptionImage: String
+	descriptionText: String
+	data: String!
+	updatedAt: String
+	createdAt: String
+	createdBy: String
+	updatedBy: String
+}
+
+type WorkflowConnection {
+	items: [Workflow]
+	nextToken: String
+}

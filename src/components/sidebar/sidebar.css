@@ -1,0 +1,37 @@
+.side-container {
+  background-color: #ffffff;
+  width: 20rem;
+  height: 95%;
+  margin-left: 10px;
+  padding: 16px;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+.sidebar-container-text {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.side-container h1 {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 8px 0;
+  cursor: pointer;
+  padding-bottom: 16px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -20px;
+}
+
+.item {
+  padding: 20px;
+  color: black;
+}

@@ -1,0 +1,214 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../Icons/icomoon.eot?3ptchu');
+  src:  url('../Icons/icomoon.eot?3ptchu#iefix') format('embedded-opentype'),
+    url('../Icons/icomoon.ttf?3ptchu') format('truetype'),
+    url('../Icons/icomoon.woff?3ptchu') format('woff'),
+    url('../Icons/icomoon.svg?3ptchu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e900";
+}
+.icon-black-graduation-cap-tool-of-university-student-for-head:before {
+  content: "\e902";
+}
+.icon-cancel-music:before {
+  content: "\e903";
+}
+.icon-chat-speech-bubbles:before {
+  content: "\e904";
+}
+.icon-check-mark:before {
+  content: "\e905";
+}
+.icon-clicker:before {
+  content: "\e906";
+}
+.icon-creative-idea:before {
+  content: "\e90a";
+}
+.icon-down-chevron:before {
+  content: "\e92e";
+}
+.icon-eye:before {
+  content: "\e92c";
+}
+.icon-facebook-1 .path1:before {
+  content: "\e90b";
+  color: rgb(59, 89, 152);
+}
+.icon-facebook-1 .path2:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-facebook:before {
+  content: "\e90d";
+  color: #475993;
+}
+.icon-folder:before {
+  content: "\e92f";
+}
+.icon-frame-landscape:before {
+  content: "\e90e";
+}
+.icon-icon-1:before {
+  content: "\e90f";
+}
+.icon-icon-2:before {
+  content: "\e901";
+}
+.icon-icon:before {
+  content: "\e910";
+}
+.icon-list:before {
+  content: "\e911";
+}
+.icon-locked-padlock:before {
+  content: "\e912";
+}
+.icon-menu:before {
+  content: "\e930";
+}
+.icon-multiply:before {
+  content: "\e931";
+}
+.icon-notification:before {
+  content: "\e932";
+}
+.icon-noun_skills_225624:before {
+  content: "\e92a";
+}
+.icon-passage-of-time:before {
+  content: "\e928";
+}
+.icon-pencil-edit-button:before {
+  content: "\e929";
+}
+.icon-question:before {
+  content: "\e913";
+}
+.icon-reply:before {
+  content: "\e914";
+}
+.icon-right-1:before {
+  content: "\e915";
+}
+.icon-right:before {
+  content: "\e916";
+}
+.icon-rubbish-bin-delete-button:before {
+  content: "\e92d";
+}
+.icon-send .path1:before {
+  content: "\e917";
+  color: rgb(2, 115, 114);
+}
+.icon-send .path2:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(2, 172, 171);
+}
+.icon-send .path3:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(129, 227, 226);
+}
+.icon-send .path4:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(129, 227, 226);
+}
+.icon-send .path5:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(66, 200, 198);
+}
+.icon-shield:before {
+  content: "\e92b";
+}
+.icon-singapore .path1:before {
+  content: "\e91c";
+  color: rgb(240, 240, 240);
+}
+.icon-singapore .path2:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icon-singapore .path3:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icon-singapore .path4:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icon-singapore .path5:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icon-singapore .path6:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icon-singapore .path7:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icon-singapore .path8:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icon-skill-1:before {
+  content: "\e933";
+}
+.icon-skill:before {
+  content: "\e934";
+}
+.icon-success:before {
+  content: "\e924";
+}
+.icon-support:before {
+  content: "\e907";
+}
+.icon-text-document:before {
+  content: "\e908";
+}
+.icon-tick:before {
+  content: "\e925";
+}
+.icon-user:before {
+  content: "\e909";
+}
+.icon-view-files:before {
+  content: "\e926";
+}
+.icon-vintage-eyeglasses:before {
+  content: "\e927";
+}

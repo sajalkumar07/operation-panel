@@ -1,0 +1,1 @@
+export default ["VIEW_TEACHERS_STRIKE", "ACTION_TEACHERS_STRIKE"];

@@ -1,0 +1,10 @@
+export const DIAL_CODE_REGEX = /^(\+?\d{1,3}|\d{1,4})$/;
+export const MOBILE_REGEX = /^[0-9]{10}$/;
+export const ZIPCODE_REGEX = /^[0-9]{6}/;
+export const STRING_NO_SPECIAL_CHAR_REGEX = /^[a-zA-Z0-9 ]*$/;
+export const EMAIL_REGEX = /^([A-Z0-9a-z._%+-]+@[A-Z0-9a-z.-]+.[A-Za-z]{2,6})$/;
+export const DIGIT_REGEX = /^\d+$/;
+export const PAYID_REGEX = /^[A-Za-z0-9\s$&+,:;=?@#|'<>.^*()%!-]{0,80}$/;
+export const EMAIL_COMMA_SEPERATED_REGEX = /^(\s?[^\s,]+@[^\s,]+\.[^\s,]+\s?,)*(\s?[^\s,]+@[^\s,]+\.[^\s,]+)$/;
+export const TEN_DIGIT_REGEX = /^\d{10}$/;
+export const WEBSITE_LINK_REGEX = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;

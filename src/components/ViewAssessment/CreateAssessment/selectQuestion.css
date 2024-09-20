@@ -1,0 +1,76 @@
+/* .modal-content-secondary {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 49%;
+  height: 100%;
+  align-self: center;
+  border: 1px solid lightgray;
+}
+
+.question-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-and-filters-secondary {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.filters {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.question-item-container {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+}
+ */
+
+.question-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-question-btn {
+  background-color: transparent;
+  width: 50px;
+  color: #4d80f4;
+  border: 2px solid #4d80f4;
+  border-radius: 32px;
+  height: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: -10px;
+}
+.question-tittle {
+  margin-top: 5px;
+}
+.question-item-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: auto;
+  height: 3rem;
+}
+
+.question-name-and-difficulty {
+  display: flex;
+  justify-content: end;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #717171;
+  font-size: 14px;
+}

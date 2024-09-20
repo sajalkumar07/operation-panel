@@ -1,0 +1,11 @@
+.fade-in-fade-out {
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-name: fadeInFadeOut;
+}
+
+@keyframes fadeInFadeOut {
+    0%   {opacity: 1}
+    50%  {opacity: 0.5}
+    100% {opacity: 1}
+}

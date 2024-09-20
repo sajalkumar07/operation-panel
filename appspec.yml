@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/apps/main_ops
+hooks:
+  BeforeInstall:
+    - location: deploy/scripts/before-install.sh
+      runas: ec2-user
+      timeout: 200
+
+  AfterInstall:
+    - location: deploy/scripts/after-install.sh
+      runas: ec2-user
+      timeout: 200

@@ -1,0 +1,4 @@
+diff a/src/config/index.js b/src/config/index.js	(rejected hunks)
+@@ -13 +13 @@ const ENV = ENV_MAP[APP_ENV] || "development";
+-console.log(APP_ENV, ENV)
++console.log(APP_ENV, ENV);

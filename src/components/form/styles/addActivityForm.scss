@@ -1,0 +1,24 @@
+.activityFormContentContainer {
+    min-height: 75vh;
+    max-height: 75vh;
+
+    .activityFormContent {
+        min-height: auto;
+    }
+    .appletPreviewContainer {
+        min-height: auto;
+
+        .appletPreviewContent {
+            max-height: 50vh;
+            max-height: 98%;
+        }
+    }
+}
+
+.zeroMargin {
+    margin: 0 !important;
+}
+
+.zeroPadding {
+    padding: 0 !important;
+}

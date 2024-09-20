@@ -1,0 +1,66 @@
+@media (max-width: 991px) {
+  html {
+    font-size: 0.9em;
+  }
+
+  .app__body {
+    .navbar {
+      .profile__info-xs {
+        display: block;
+      }
+      .profile__info {
+        display: none;
+      }
+      .logout-xs {
+        display: flex;
+        align-items: center;
+      }
+      .logout {
+        display: none;
+      }
+      .collapse {
+        &.navbar-collapse {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .sidenav{
+    .main-menu {
+        top: 58px;
+        height: calc(100% - 60px);
+      }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    html {
+      font-size: 0.85em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    html {
+      font-size: 0.8em;
+    }
+  }
+
+    @media (max-width: 575px) {
+      
+    }
+
+  //   @media (min-width: 576px) and (max-width: 767px) {
+  //   }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 0.91em;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  html {
+    font-size: 0.94em;
+  }
+}
